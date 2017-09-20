@@ -55,22 +55,12 @@ namespace vidly.Controllers
             return View(customer);
         }
 
-        
-
-        #region "Old Code"
-        /*
-        private IEnumerable<Customer> GetCustomers()
+        [HttpPost]
+        public ActionResult Create(NewCustomerViewModel viewModel)
         {
-            return new List<Customer>
-            {
-                new Customer { ID = 1, Name = "John Smith", DOB =  new DateTime(1983, 4, 11)},
-                new Customer { ID = 2, Name = "Mary Williams",  DOB =  new DateTime(1985, 2, 22)},
-                new Customer { ID = 3, Name = "James Brown",  DOB =  new DateTime(1965, 7, 19)}
-            };
+            return View();
         }
-        */
-        #endregion
-
+        
     }
 
 }
