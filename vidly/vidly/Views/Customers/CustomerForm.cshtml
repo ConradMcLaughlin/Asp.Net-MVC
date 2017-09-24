@@ -4,9 +4,9 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>New Customer</h2>
+<h2>Customer</h2>
 
-@using (Html.BeginForm("Create", "Customers"))
+@using (Html.BeginForm("Save", "Customers"))
 {
     <div class="form-group">
         @Html.LabelFor(m => m.Customer.Name)
@@ -25,5 +25,9 @@
             @Html.CheckBoxFor(m => m.Customer.IsSubscribedToNewsletter) Subscribed To Newsletter?
         </label>
     </div>
+
+    //Need to pass through the ID as a hidden field
+    @Html.HiddenFor(m => m.Customer.ID);
+
     <button type="submit" class="btn btn-primary">Save</button> 
 }
