@@ -28,7 +28,6 @@ namespace vidly.Controllers
         {
             var viewModel = new MoviesViewModel()
             {
-                //Movies = HelperTools.TestMovies()
                 Movies = _context.Movies.Include(c => c.Genre).ToList()
             };
             return View(viewModel);
@@ -37,7 +36,6 @@ namespace vidly.Controllers
         [Route("movies/details/{id}")]
         public ActionResult Details(int id)
         {
-            //var customer = GetCustomers().SingleOrDefault(c => c.ID == id);
             var movie = _context.Movies.Include(c => c.Genre).SingleOrDefault(c => c.ID == id);
 
             if (movie == null)
@@ -79,52 +77,7 @@ namespace vidly.Controllers
 
 
             return View(viewModel);
-
-            //return View(movie);
-            //return RedirectToAction("Index", "Home", new { page = 1, sortBy = "name" });
         }
 
     }
-
-
-    #region "Old Code"
-    //[Route("movies/details/{id}")]
-    //public ActionResult Details(int? id)
-    //{
-    //    if (!id.HasValue)
-    //        return RedirectToAction("Index");
-    //    else
-    //        return View(HelperTools.TestMovies()[(int)id - 1]);
-    //}
-
-    ////movies
-    ////movies?pageIndex=3
-    ////movies?pageIndex=3&sortBy=ReleaseDate
-    ////movies?sortBy=Rating
-    //public ActionResult Index(int? pageIndex, string sortBy)
-    //{
-    //    if (!pageIndex.HasValue)
-    //        pageIndex = 1;
-
-    //    if (String.IsNullOrEmpty(sortBy))
-    //        sortBy = "Name";
-
-    //    return Content(String.Format("pageIndex={0}&sortBy={1}", pageIndex, sortBy));
-    //}
-
-    //partial class HelperTools
-    //{
-    //    internal static List<Movie> TestMovies()
-    //    {
-    //        return new List<Movie>
-    //        {
-    //            new Movie { ID = 1, Name = "Shrek"},
-    //            new Movie { ID = 2, Name = "Wall-E"},
-    //        };
-    //    }
-    //}
-
-    #endregion
-
-
 }
