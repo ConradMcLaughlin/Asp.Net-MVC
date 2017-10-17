@@ -14,7 +14,7 @@ namespace vidly.ViewModels
         {
             get
             {
-                return Customer == null ? "New Customer" : "Edit Customer";
+                return (Customer == null || Customer.ID == 0) ? "New Customer" : "Edit Customer";
             }
         }
     }
