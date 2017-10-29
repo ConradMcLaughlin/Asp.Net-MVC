@@ -32,7 +32,9 @@
 
     //Need to pass through the ID as a hidden field
     @Html.HiddenFor(m => m.Customer.ID);
-
+    
+    @Html.AntiForgeryToken()
+    
     <button type="submit" class="btn btn-primary">Save</button> 
 }
 
