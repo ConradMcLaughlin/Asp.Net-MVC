@@ -16,16 +16,16 @@ namespace vidly.Migrations
                     })
                 .PrimaryKey(t => t.Id);
             
-            AddColumn("dbo.Movies", "GenreId", c => c.Byte(nullable: false));
-            CreateIndex("dbo.Movies", "GenreId");
-            AddForeignKey("dbo.Movies", "GenreId", "dbo.Genres", "Id", cascadeDelete: true);
+            AddColumn("dbos", "GenreId", c => c.Byte(nullable: false));
+            CreateIndex("dbos", "GenreId");
+            AddForeignKey("dbos", "GenreId", "dbo.Genres", "Id", cascadeDelete: true);
         }
         
         public override void Down()
         {
-            DropForeignKey("dbo.Movies", "GenreId", "dbo.Genres");
-            DropIndex("dbo.Movies", new[] { "GenreId" });
-            DropColumn("dbo.Movies", "GenreId");
+            DropForeignKey("dbos", "GenreId", "dbo.Genres");
+            DropIndex("dbos", new[] { "GenreId" });
+            DropColumn("dbos", "GenreId");
             DropTable("dbo.Genres");
         }
     }
