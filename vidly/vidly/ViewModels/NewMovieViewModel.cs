@@ -15,7 +15,7 @@ namespace vidly.ViewModels
         {
             get
             {
-                return Movie == null ? "New Movie" : "Edit Movie";
+                return (Movie == null || Movie.ID == 0) ? "New Movie" : "Edit Movie";
             }
         }
     }
