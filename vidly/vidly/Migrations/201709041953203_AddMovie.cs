@@ -8,7 +8,7 @@ namespace vidly.Migrations
         public override void Up()
         {
             CreateTable(
-                "dbos",
+                "dbo.Movies",
                 c => new
                     {
                         ID = c.Int(nullable: false, identity: true),
