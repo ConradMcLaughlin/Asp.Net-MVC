@@ -12,6 +12,12 @@ namespace vidly.Models
         [Required]
         [Display(Name = "Driving Licence")]
         public string DrivingLicence { get; set; }
+
+        [Required]
+        [Display(Name = "Phone Number")]
+        [Phone]
+        [StringLength(50, ErrorMessage = "The {0} must be at least {2} characters long.", MinimumLength = 6)]
+        public string PhoneNumber { get; set; }
     }
 
     public class ExternalLoginListViewModel
@@ -68,6 +74,12 @@ namespace vidly.Models
 
     public class RegisterViewModel
     {
+        [Required]
+        [Phone]
+        [StringLength(50, ErrorMessage = "The {0} must be at least {2} characters long.", MinimumLength = 6)]
+        [Display(Name = "Phone Number")]
+        public string PhoneNumber { get; set; }
+        
         [Required]
         [Display(Name = "Driving Licence")]
         public string DrivingLicence { get; set; }
