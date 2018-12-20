@@ -287,10 +287,15 @@
     <Compile Include="Migrations\201804291035595_AddPhoneNumberToApplicationUser.Designer.cs">
       <DependentUpon>201804291035595_AddPhoneNumberToApplicationUser.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201812201537083_RentalModel.cs" />
+    <Compile Include="Migrations\201812201537083_RentalModel.Designer.cs">
+      <DependentUpon>201812201537083_RentalModel.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\ApplicationUser.cs" />
     <Compile Include="Models\Customer.cs" />
+    <Compile Include="Models\Rental.cs" />
     <Compile Include="ViewModels\ExternalLoginConfirmationViewModel.cs" />
     <Compile Include="Models\Genre.cs" />
     <Compile Include="Models\ApplicationDbContext.cs" />
@@ -610,6 +615,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201804291035595_AddPhoneNumberToApplicationUser.resx">
       <DependentUpon>201804291035595_AddPhoneNumberToApplicationUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201812201537083_RentalModel.resx">
+      <DependentUpon>201812201537083_RentalModel.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
