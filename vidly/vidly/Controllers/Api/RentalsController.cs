@@ -26,19 +26,28 @@ namespace vidly.Controllers.Api
         [HttpPost]
         public IHttpActionResult CreateRental(RentalDto newRental)
         {
-            //1) Load Customer and Movies
-            //2) For each Movie add a new Rental Object with the Customer and that Movie
-            //   then add to the Database
-            //3) Use PostMan to test that the method works
+            //Defensive programming can add noise/pollution to code
 
-            var customer = _context.Customers.Single(
+            //if (newRental.MovieIds.Count == 0)
+            //    return BadRequest("No Movie Ids have been given.");
+
+            var customer = _context.Customers.SingleOrDefault(
                 c => c.ID == newRental.CustomerId);
 
+            //if (customer == null)
+            //    return BadRequest("CustomerId is not valid.");
+
             var movies = _context.Movies.Where(
-                m => newRental.MovieIds.Contains(m.ID));
+                m => newRental.MovieIds.Contains(m.ID)).ToList();
+
+            //if (movies.Count != newRental.MovieIds.Count)
+            //    return BadRequest("One or more MovieIds are invalid.");
 
             foreach (var movie in movies)
             {
+                if (movie.NumberAvailable == 0)
+                    return BadRequest("Movie is not available");
+
                 movie.NumberAvailable--;
 
                 var rental = new Rental
