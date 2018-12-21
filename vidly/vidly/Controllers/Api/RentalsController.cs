@@ -1,4 +1,5 @@
-﻿using System;
+﻿using AutoMapper;
+using System;
 using System.Linq;
 using System.Web.Http;
 using vidly.Dtos;
@@ -38,6 +39,8 @@ namespace vidly.Controllers.Api
 
             foreach (var movie in movies)
             {
+                movie.NumberAvailable--;
+
                 var rental = new Rental
                 {
                     Customer = customer,
@@ -45,7 +48,7 @@ namespace vidly.Controllers.Api
                     DateRented = DateTime.Now
                 };
 
-                _context.Rentals.Add(rental);
+                 _context.Rentals.Add(rental); 
             }
 
             _context.SaveChanges();
