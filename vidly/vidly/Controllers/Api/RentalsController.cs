@@ -28,14 +28,14 @@ namespace vidly.Controllers.Api
         {
             //Defensive programming can add noise/pollution to code
 
-            //if (newRental.MovieIds.Count == 0)
-            //    return BadRequest("No Movie Ids have been given.");
+            if (newRental.MovieIds.Count == 0)
+                return BadRequest("No Movie Ids have been given.");
 
             var customer = _context.Customers.SingleOrDefault(
                 c => c.ID == newRental.CustomerId);
 
-            //if (customer == null)
-            //    return BadRequest("CustomerId is not valid.");
+            if (customer == null)
+                return BadRequest("CustomerId is not valid.");
 
             var movies = _context.Movies.Where(
                 m => newRental.MovieIds.Contains(m.ID)).ToList();
