@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.25420.1
+# Visual Studio 15
+VisualStudioVersion = 15.0.28010.2048
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "vidly", "vidly\vidly.csproj", "{C7621411-5D0A-4F26-BCE9-881784427766}"
 EndProject
@@ -9,14 +9,20 @@ Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
+		Test|Any CPU = Test|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{C7621411-5D0A-4F26-BCE9-881784427766}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{C7621411-5D0A-4F26-BCE9-881784427766}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C7621411-5D0A-4F26-BCE9-881784427766}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C7621411-5D0A-4F26-BCE9-881784427766}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C7621411-5D0A-4F26-BCE9-881784427766}.Test|Any CPU.ActiveCfg = Test|Any CPU
+		{C7621411-5D0A-4F26-BCE9-881784427766}.Test|Any CPU.Build.0 = Test|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {4FE0171C-BA37-4A1B-972A-2162F9BE2A91}
 	EndGlobalSection
 EndGlobal
