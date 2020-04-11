@@ -6,9 +6,12 @@ by editing this MSBuild file. In order to learn more about this please visit htt
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <TimeStampOfAssociatedLegacyPublishXmlFile />
-    <_PublishTargetUrl>C:\Users\mc_la\Source\Repos\MVC5-Course\vidly\vidly\bin\Release\Publish</_PublishTargetUrl>
+    <_PublishTargetUrl>c:\deploy</_PublishTargetUrl>
   </PropertyGroup>
   <ItemGroup>
+    <File Include="AppSettings.config">
+      <publishTime>04/11/2020 10:50:51</publishTime>
+    </File>
     <File Include="bin/Antlr3.Runtime.dll">
       <publishTime>02/22/2013 08:43:40</publishTime>
     </File>
@@ -19,16 +22,16 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>10/22/2015 01:39:56</publishTime>
     </File>
     <File Include="bin/EntityFramework.dll">
-      <publishTime>03/02/2015 09:32:26</publishTime>
+      <publishTime>02/03/2015 09:32:26</publishTime>
     </File>
     <File Include="bin/EntityFramework.SqlServer.dll">
-      <publishTime>03/02/2015 09:32:26</publishTime>
+      <publishTime>02/03/2015 09:32:26</publishTime>
     </File>
     <File Include="bin/Glimpse.Ado.dll">
-      <publishTime>07/09/2014 15:25:56</publishTime>
+      <publishTime>09/07/2014 15:25:56</publishTime>
     </File>
     <File Include="bin/Glimpse.AspNet.dll">
-      <publishTime>02/04/2014 11:55:26</publishTime>
+      <publishTime>04/02/2014 11:55:26</publishTime>
     </File>
     <File Include="bin/Glimpse.Core.dll">
       <publishTime>06/25/2014 16:08:12</publishTime>
@@ -37,16 +40,16 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>10/29/2014 12:10:50</publishTime>
     </File>
     <File Include="bin/Glimpse.Mvc5.dll">
-      <publishTime>02/04/2014 11:55:28</publishTime>
+      <publishTime>04/02/2014 11:55:28</publishTime>
     </File>
     <File Include="bin/Microsoft.AspNet.Identity.Core.dll">
-      <publishTime>04/03/2015 17:07:22</publishTime>
+      <publishTime>03/04/2015 17:07:22</publishTime>
     </File>
     <File Include="bin/Microsoft.AspNet.Identity.EntityFramework.dll">
-      <publishTime>04/03/2015 17:07:22</publishTime>
+      <publishTime>03/04/2015 17:07:22</publishTime>
     </File>
     <File Include="bin/Microsoft.AspNet.Identity.Owin.dll">
-      <publishTime>04/03/2015 17:07:22</publishTime>
+      <publishTime>03/04/2015 17:07:22</publishTime>
     </File>
     <File Include="bin/Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll">
       <publishTime>06/15/2015 02:06:24</publishTime>
@@ -139,7 +142,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>01/28/2015 04:02:18</publishTime>
     </File>
     <File Include="bin/System.Web.Optimization.dll">
-      <publishTime>02/11/2014 15:26:04</publishTime>
+      <publishTime>11/02/2014 15:26:04</publishTime>
     </File>
     <File Include="bin/System.Web.Razor.dll">
       <publishTime>01/28/2015 04:02:32</publishTime>
@@ -154,10 +157,10 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>01/28/2015 04:04:30</publishTime>
     </File>
     <File Include="bin/vidly.dll">
-      <publishTime>04/05/2020 10:18:01</publishTime>
+      <publishTime>04/11/2020 10:51:23</publishTime>
     </File>
     <File Include="bin/vidly.pdb">
-      <publishTime>04/05/2020 10:18:01</publishTime>
+      <publishTime>04/11/2020 10:51:23</publishTime>
     </File>
     <File Include="bin/WebGrease.dll">
       <publishTime>07/17/2013 17:03:52</publishTime>
@@ -538,10 +541,10 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>03/31/2020 19:01:03</publishTime>
     </File>
     <File Include="Scripts/bloodhound.js">
-      <publishTime>03/01/2020 10:07:52</publishTime>
+      <publishTime>01/03/2020 10:07:52</publishTime>
     </File>
     <File Include="Scripts/bloodhound.min.js">
-      <publishTime>03/01/2020 10:07:52</publishTime>
+      <publishTime>01/03/2020 10:07:52</publishTime>
     </File>
     <File Include="Scripts/bootbox.js">
       <publishTime>12/20/2018 14:19:22</publishTime>
@@ -784,16 +787,16 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>03/31/2020 19:01:03</publishTime>
     </File>
     <File Include="Scripts/typeahead.bundle.js">
-      <publishTime>03/01/2020 10:07:52</publishTime>
+      <publishTime>01/03/2020 10:07:52</publishTime>
     </File>
     <File Include="Scripts/typeahead.bundle.min.js">
-      <publishTime>03/01/2020 10:07:52</publishTime>
+      <publishTime>01/03/2020 10:07:52</publishTime>
     </File>
     <File Include="Scripts/typeahead.jquery.js">
-      <publishTime>03/01/2020 10:07:52</publishTime>
+      <publishTime>01/03/2020 10:07:52</publishTime>
     </File>
     <File Include="Scripts/typeahead.jquery.min.js">
-      <publishTime>03/01/2020 10:07:52</publishTime>
+      <publishTime>01/03/2020 10:07:52</publishTime>
     </File>
     <File Include="Scripts/_references.js">
       <publishTime>12/20/2018 14:19:22</publishTime>
@@ -910,7 +913,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>12/20/2018 14:19:22</publishTime>
     </File>
     <File Include="Web.config">
-      <publishTime>04/05/2020 10:18:02</publishTime>
+      <publishTime>04/11/2020 10:51:24</publishTime>
     </File>
   </ItemGroup>
 </Project>
